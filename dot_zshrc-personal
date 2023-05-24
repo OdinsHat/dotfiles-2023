@@ -1,0 +1,4 @@
+# Clean up cache folder of crap
+alias cleancache="rm -fr ~/.cache/*"
+alias cleanterm="history -p"
+alias cleanlocal="rm -fr ~/.local/opt/*"
