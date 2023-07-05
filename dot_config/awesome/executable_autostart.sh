@@ -33,3 +33,5 @@ run volumeicon
 #run ckb-next -b
 #run discord
 #run telegram-desktop
+run copyq
+run albert
