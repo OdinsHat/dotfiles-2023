@@ -43,6 +43,9 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 -- }}}
 
+-- My own widgets
+local weather_widget = require('awesome-wm-widgets.weather-widget.weather')
+-- End my own widgets
 
 
 -- {{{ Error handling
