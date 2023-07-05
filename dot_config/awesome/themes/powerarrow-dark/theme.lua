@@ -10,6 +10,7 @@ local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
 local dpi   = require("beautiful.xresources").apply_dpi
+local private = require("private")
 
 -- My own widgets
 local weather_widget = require('awesome-wm-widgets.weather-widget.weather')
@@ -358,7 +359,7 @@ function theme.at_screen_connect(s)
             --wibox.container.background(net.widget, theme.bg_focus),
             arrl_dl,
             weather_widget({
-                api_key='92c475c1f169fac044f89b0a68593b83',
+                api_key=private.weather_api_key,
                 coordinates = {53.480759, -2.242631},
                 time_format_12h = true,
                 units = 'metric',
