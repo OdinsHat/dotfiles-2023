@@ -730,14 +730,14 @@ globalkeys = my_table.join(
     --awful.key({}, "XF86AudioPrev", function() awful.util.spawn("playerctl previous", false) end),
     --awful.key({}, "XF86AudioStop", function() awful.util.spawn("playerctl stop", false) end),
 
---Media keys supported by mpd.
-    awful.key({}, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
+    --Media keys supported by mpd.
+ --[[    awful.key({}, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
     awful.key({}, "XF86AudioNext", function () awful.util.spawn("mpc next") end),
     awful.key({}, "XF86AudioPrev", function () awful.util.spawn("mpc prev") end),
     awful.key({}, "XF86AudioStop", function () awful.util.spawn("mpc stop") end),
-
+ ]]
     -- MPD control
-    awful.key({ modkey1, "Shift" }, "Up",
+--[[     awful.key({ modkey1, "Shift" }, "Up",
         function ()
             os.execute("mpc toggle")
             beautiful.mpd.update()
@@ -776,7 +776,7 @@ globalkeys = my_table.join(
             end
             naughty.notify(common)
         end,
-        {description = "mpc on/off", group = "widgets"}),
+        {description = "mpc on/off", group = "widgets"}), ]]
 
     -- Copy primary to clipboard (terminals to gtk)
     --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
