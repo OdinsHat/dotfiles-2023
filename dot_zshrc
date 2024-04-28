@@ -225,6 +225,8 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/systemd
     zgenom ohmyzsh plugins/nmap
     zgenom ohmyzsh plugins/vscode
+
+    zgenom load zplugin/zsh-exa
         
     zgenom load zsh-users/zsh-completions
     zgenom load zsh-users/zsh-autosuggestions
