@@ -326,6 +326,13 @@ globalkeys = my_table.join(
 	end,
     {description = "show dmenu", group = "hotkeys"}),
 
+    awful.key({ modkey }, "d",
+    function ()
+        awful.spawn(string.format("/home/josh/.config/rofi/launchers/type-6/launcher.sh",
+        beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
+    end,
+    {description = "show dmenu", group = "hotkeys"}),
+
     -- Function keys
     awful.key({ }, "F12", function () awful.util.spawn( "xfce4-terminal --drop-down" ) end,
         {description = "dropdown terminal" , group = "function keys"}),
@@ -354,7 +361,7 @@ globalkeys = my_table.join(
         {description = mediaplayer , group = "function keys" }),
     awful.key({ modkey }, "F11", function () awful.util.spawn( "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" ) end,
         {description = "rofi fullscreen" , group = "function keys" }),
-    awful.key({ modkey }, "F12", function () awful.util.spawn( "/home/josh/.config/rofi/launchers/launcher.sh" ) end,
+    awful.key({ modkey }, "F12", function () awful.util.spawn( "/home/josh/.config/rofi/launchers/type-6/launcher.sh" ) end,
         {description = "rofi" , group = "function keys" }),
 
     -- super + ...
@@ -394,7 +401,7 @@ globalkeys = my_table.join(
 
     -- ctrl + --
 
-    awful.key({ modkey1 }, "`", function () awful.util.spawn( "/home/josh/.config/rofi/launchers/launcher.sh" ) end,
+    awful.key({ modkey1 }, "`", function () awful.util.spawn( "/home/josh/.config/rofi/launchers/type-6/launcher.sh" ) end,
         {description = "rofi" , group = "ctrl" }),
     
     -- ctrl+alt +  ...
